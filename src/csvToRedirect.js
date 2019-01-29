@@ -1,6 +1,5 @@
 
 import csvtojson from 'csvtojson'
-import url_js from 'url-js'
 import { resolve } from 'path'
 import { writeFile } from 'fs'
 import 'colors'
@@ -13,9 +12,10 @@ export default (csvfile, out) => {
   })
     .fromFile(resolve(csvfile))
     .then(jsonObj => jsonObj.map((row) => {
+      console.log(row)
       const start = row[0]
-      const go = url_js(row[1])
-      return `rewrite ^${start}(/$|$) ${go.path} permanent;`
+      const go = row[1]
+      return `rewrite ^${start}(/$|$) ${go} permanent;`
     }))
     .then(res => {
       writeFile(
