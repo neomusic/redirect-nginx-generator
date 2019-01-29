@@ -12,7 +12,6 @@ export default (csvfile, out) => {
   })
     .fromFile(resolve(csvfile))
     .then(jsonObj => jsonObj.map((row) => {
-      console.log(row)
       const start = row[0]
       const go = row[1]
       return `rewrite ^${start}(/$|$) ${go} permanent;`
