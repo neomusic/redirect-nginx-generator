@@ -1,9 +1,10 @@
 {
   "name": "redirect-nginx-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "scripts": {
     "start": "npm run build && node index.js",
     "build": "rm -rf dist && babel src -d dist",
+    "postinstall": "rm -rf dist && babel src -d dist",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
