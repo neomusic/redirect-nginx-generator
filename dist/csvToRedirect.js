@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _csvtojson = _interopRequireDefault(require("csvtojson"));
 
@@ -13,10 +13,10 @@ var _fs = require("fs");
 
 require("colors");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 var _default = function _default(csvfile, out) {
-  (0, _csvtojson.default)({
+  (0, _csvtojson["default"])({
     noheader: true,
     delimiter: ';',
     output: "csv"
@@ -35,9 +35,9 @@ var _default = function _default(csvfile, out) {
   }).then(function () {
     console.log('All done \n Check the file at'.green.bold);
     console.log("".concat((0, _path.resolve)(out)).bold);
-  }).catch(function (err) {
+  })["catch"](function (err) {
     return console.error('Something went wrong'.red.bold, err);
   });
 };
 
-exports.default = _default;
+exports["default"] = _default;
