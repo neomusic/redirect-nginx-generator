@@ -17,7 +17,7 @@
   "bin": {
     "redirect-nginx-generator": "./index.js"
   },
-  "author": "Giuseppe Aremare <g.aremare@palmabit.com> (https://github.com/neomusic)",
+  "author": "Giuseppe Aremare <dev@giuseppearemare.it> (https://github.com/neomusic)",
   "description": "Easily create nginx redirects from a csv file",
   "dependencies": {
     "colors": "^1.4.0",
